@@ -1,0 +1,37 @@
+.total {
+  display: flex; /*부모가 flex면 자식들은 가로로 정렬됨. 넓이는 내용물에 따라 자동 결정됨-> min-width주면 됨*/
+  justify-content: space-around; /*사이공간 적당히 띄움*/
+  margin: 2rem; /* rem : 폰트사이즈 상대 단위*/
+}
+
+.column {
+  width: 60vmin; /*최소넓이(min-width)로 줘도 됨.*/
+  /*viewport에 비례한 단위. */
+  text-align: left;
+}
+
+.title {
+  border-bottom: solid saddlebrown;
+}
+
+.list {
+  border: 1px sandybrown solid;
+  border-radius: 5px;
+  padding: .5rem;
+  margin: 1rem;
+}
+
+.add {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.add > button {
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #F4A45F;
+  color: #fff; /*핵사코드에서 앞뒤 글자가 똑같으면 세글자 생략 가능*/
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>오늘의 투두</title>
+    <script>
+        
+        function done (index){ //(얘는 몇번째 있는 친구다) 알려주기 위해
+            let card = document.getElementsByClassName("todo-card")[index];
+            card.style.backgroundColor = "gray";
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        #title {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .wrap {
+            display: flex;
+        }
+
+        .todo-card {
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 2em;
+            margin: 1em;
+            flex: 1 1 0;
+        }
+
+        button {
+        width: calc(20% - 20px);
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+    </style>
+    <h1>오늘 할 일</h1>
+    <div class="wrap">
+        <div class="todo-card">
+            <h3>아침밥 먹기</h3>
+            <p>아침 챙겨 먹기</p>
+            <button onClick="done(0)">완료</button>
+        </div>
+
+        <div class="todo-card">
+            <h3>리액트 강의 듣기</h3>
+            <p>완강!!!</p>
+            <button onClick="done(1)">완료</button>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="todo-card">
+            <h3>WIL 작성하기</h3>
+            <p>회고</p>
+            <button onClick="done(2)">완료</button>
+        </div>
+        <div class="todo-card">
+            <h3>과제하기</h3>
+            <p>개인과제, 팀과제</p>
+            <button onClick="done(3)">완료</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
